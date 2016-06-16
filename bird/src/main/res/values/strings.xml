@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">bird</string>
+    <string name="main_1">首页</string>
+    <string name="main_2">消息</string>
+    <string name="main_3">动态</string>
+    <string name="main_4">我的</string>
+</resources>

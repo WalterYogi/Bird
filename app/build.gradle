@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.finance365"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    productFlavors{
+        wandoujia {
+            applicationId 'com.CaiJinTong.caijintongapp'
+        }
+        baidu {
+            applicationId 'com.CaiJinTong.caijintongapp'
+        }
+        c360 {
+            applicationId 'com.CaiJinTong.caijintongapp'
+        }
+        yingyongbao {
+            applicationId 'com.CaiJinTong.caijintongapp'
+        }
+        meizu {
+            applicationId 'com.CaiJinTong.caijintongapp'
+        }
+        xiaomi {
+            applicationId 'com.CaiJinTong.caijintongapp'
+        }
+
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:21.0.0'
+    compile project(':bird')
+}

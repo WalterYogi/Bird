@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="base_size">17sp</dimen>
+    <dimen name="base_large_size">16sp</dimen>
+    <dimen name="base_content_size">14sp</dimen>
+    <!--SegmentedGroup-->
+    <dimen name="radio_button_conner_radius">5dp</dimen>
+    <dimen name="radio_button_stroke_border">1dp</dimen>
+
+</resources>
